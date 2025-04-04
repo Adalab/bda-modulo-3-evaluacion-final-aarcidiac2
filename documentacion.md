@@ -26,7 +26,7 @@ Después de varios intentos con distintos métodos me doy cuenta de que hay clie
 
 No hay NULOS! HAY CEROS!!!! 
 
-**Inspirada por las diosas del olimpo, se me ocurre, de repente, crear una maravillosa función para crear un diccionario con las columnas con ceros y el número de ceros que tiene cada una de ellas**
+**Inspirada, se me ocurre, de repente, crear una maravillosa función para crear un diccionario con las columnas con ceros y el número de ceros que tiene cada una de ellas**
 
 {'flights_booked': 196128,
  'flights_with_companions': 295023, **> 50%**
@@ -39,13 +39,6 @@ No hay NULOS! HAY CEROS!!!!
  Algunas columnas son casi el 100%, flights with companions supera el 50% y el resto está muy cerca de llegar al 50%
 
  Esto me ayudará a revisar qué columnas me interesa eliminar
-
-**Duplicados**
-Examino y elimino
-
-**He creado una función para cambiar los nombres la columnas. Lo utilizaré también en el siguiente df**
-
-Con tanto 0, seguro que hay duplicados. Reviso duplicados. 1864. Los elimino.
 
 ## CUSTOMER LOYALTY HISTORY
 
@@ -98,6 +91,17 @@ He hecho un df con los not nulls en cancellation (O SEA, LOS QUE SÍ HAN CANCELA
 - Estado civil y género
 
 La mayoría de estos datos están en el segundo df y no en el primero. Hago listados de columnas a borrar.
+## FLIGHT ACTIVITY
+### LIMPIANDO DUPLICADOS Y OTROS
+**Duplicados**
+Examino y elimino
+
+**He creado una función para cambiar los nombres la columnas. Lo utilizaré también en el siguiente df**
+Con tanto 0, seguro que hay duplicados. Reviso duplicados. 1864. Los elimino.
+
+## LOYALTY HISTORY
+### Arreglamos el problema de la columna salary (tiene un mínimo con un número negativo)
+
 
 ## LISTA COLUMNAS FLIGHT ACTIVITY
  0. loyalty_number *  
