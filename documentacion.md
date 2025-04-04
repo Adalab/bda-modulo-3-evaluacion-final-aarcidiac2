@@ -81,7 +81,8 @@ He hecho un df con los not nulls en cancellation (O SEA, LOS QUE SÍ HAN CANCELA
 
 **EN LAS PREGUNTAS SE MENCIONA:**
 
-- Cantidad de vuelos
+- Cantidad de vuelos reservados
+- Mes del año
 - Distancia de vuelos
 - Puntos acumulados
 - Provincias y Estados clientes
@@ -132,3 +133,28 @@ Con tanto 0, seguro que hay duplicados. Reviso duplicados. 1864. Los elimino.
  13. enrollment_month 
  14. cancellation_year
  15. cancellation_month
+
+ # UNION
+
+ ## MERGE
+
+ Utilizo merge() porque es el método que me permite unir dataframes basándome en colunas comunes. En este caso, necesitamos unir las columnas de tal manera que se tenga en cuenta que la columna loyalty_number es común.
+
+ Queremos preservar todas las filas de df_flight_activity para seguir manteniendo los valores segregados por meses del año. Por eso, df_flight_activity será nuestro left.
+
+ ### VERIFICO CONSISTENCIA Y CORRIJO DATOS Y/O AJUSTO DATOS
+Hago un examen rápido y transformo los NaN en ceros.
+
+# VISUALIZACIÓN
+
+## 1. ¿Cómo se distribuye la **cantidad de vuelos** reservados por mes durante el año?
+
+**Columnas:** flights_booked y month
+
+Uso un **barplot** al estar lidiando con variables numéricas y no querer que las cuente sino que haga una representación usando un promedio.
+
+## 2. ¿Existe una relación entre la **distancia de los vuelos** y los **puntos acumulados** por los cliente?
+**Columnas:** points accumulated y distance
+Utilizo un **scatterplot** ya que es el método para ver si existe relacion entre dos variables numéricas. 
+
+## 3. ¿Cuál es la distribución de los clientes por **provincia o estado**?
