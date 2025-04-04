@@ -46,6 +46,8 @@ Varios tipos de columnas. Veo NaN's sólo en las columnas de cancellation month 
 
 filas 16737, columnas 16
 
+Country es siempre Canadá
+
 **Describe**
 
 - Loyalty Number: 100100018 - 999986 (igual que en flight activity)
@@ -153,8 +155,52 @@ Hago un examen rápido y transformo los NaN en ceros.
 
 Uso un **barplot** al estar lidiando con variables numéricas y no querer que las cuente sino que haga una representación usando un promedio.
 
+- Parece que los meses de más reservas son 7(julio) y 12(diciembre) coincidiendo con vacaciones de verano y navidades. 
+
+- En enero y febrero se reservan menos vuelos y en marzo hay un pico de actividad seguramente por la llegada del buen tiempo, la pascua o la semana santa. El buen tiempo explicaría también que el promedio de reservas crezca durante los meses de primavera hasta llegar a su tope en julio y descender poco a poco hasta noviembre.
+
 ## 2. ¿Existe una relación entre la **distancia de los vuelos** y los **puntos acumulados** por los cliente?
 **Columnas:** points accumulated y distance
 Utilizo un **scatterplot** ya que es el método para ver si existe relacion entre dos variables numéricas. 
 
+Parece que sí que existe una clara relación entre la distancia y los puntos acumulados ya que a mayor distancia mayor los puntos acumulados. Son valores directamente proporcionales
+
 ## 3. ¿Cuál es la distribución de los clientes por **provincia o estado**?
+
+**Columnas:** province o country
+
+Utilizo un countplot porque cuenta registros de la columna que le señale.
+
+Todos los registros son de Canadá
+
+Parece que la mayoría de los clientes están el Ontario, British Columnia y Quebec en orden descendente de número de clientes.
+
+**Tenemos un problema.** Y es que existen varios registros por loyalty_number... Tendremos que agrupar por provincia y, después, utilizar un barplot.
+
+- Parece que con el countplot y el barplot son muy parecidos. Seguramente porque todos los loyalty_number están repetidos el mismo número de veces (12, una cada mes)
+
+- Podemos decir que las provincias con más clientes son Ontario, British Columnbia y Queber respectivamente y con gran diferencia de clientes respecto al resto de provincias. 
+
+## 4. ¿Cómo se compara el **salario** promedio entre los diferentes **niveles educativos** de los clientes?
+
+**Columnas:** salary y education
+
+Utilizaré un barplot ya que parece lo más indicado para comparar una variable categórica con una numérica
+
+Vale. Parece que todos los datos en college son 0 en salary. Seguramente no existieron registros. Recordemos que hemos cambiado los NaN por 0. Aún así, podemos ver que cuanto más alto sea el nivel educativo, más alto es el salario. 
+
+## 5. ¿Cuál es la proporción de clientes con diferentes tipos de **tarjetas de fidelidad**?
+
+**Columnas:** loyalty_card
+
+Este es otro caso de countplot que cuente el número de registros para cada categoría de una columna
+
+Parece que la mayoría de clientes tienen la tarjeta star, seguido de nova y por último aurora.
+
+## 6. ¿Cómo se distribuyen los clientes según su **estado civil y género**?
+
+**Columnas:** marital_status y gender
+
+Tendremos que utilizar un countplot ya que son dos variables categóricas y necesitamos que se cuenten los registros. Vamos a usar hue para crear una 'tercera dimensión' que será gender.
+
+Vemos que la mayoría de los clientes están casados, tanto hombres como mujeres. No existe diferencia entre estados civiles y género. 
