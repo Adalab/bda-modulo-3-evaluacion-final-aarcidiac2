@@ -26,7 +26,7 @@ Después de varios intentos con distintos métodos me doy cuenta de que hay clie
 
 No hay NULOS! HAY CEROS!!!! 
 
-**Inspirada, se me ocurre, de repente, crear una maravillosa función para crear un diccionario con las columnas con ceros y el número de ceros que tiene cada una de ellas**
+**Inspirada, se me ocurre, crear una maravillosa función para crear un diccionario con las columnas con ceros y el número de ceros que tiene cada una de ellas**
 
 {'flights_booked': 196128,
  'flights_with_companions': 295023, **> 50%**
@@ -66,8 +66,6 @@ Confirmo con isnull()
 14670 registros NaN. Significa que la mayoría de clientes no han cancelado aunque también significa que tenemos 2000 clientes que sí cancelaron y es posible que sean los 0 del otro dataframe
 
 He hecho un df con los not nulls en cancellation (O SEA, LOS QUE SÍ HAN CANCELADO) = df_not_null_history
-
-**Arreglamos el problema de la columna salary (tiene un mínimo con un número negativo)**
 
 
 # LIMPIEZA
